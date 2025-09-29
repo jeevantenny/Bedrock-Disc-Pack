@@ -1,0 +1,41 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "JJJ Disc Pack §8§oTemplate§r",
+        "description": "Adds a few vanilla music as music discs. This pack can be modified to add more music discs to the game.",
+        "uuid": "c55454e3-8860-d93e-4d19-9582c1b0c58d",
+        "version": [1,1,2],
+        "min_engine_version": [1,21,100]
+    },
+    "metadata": {
+        "generated_with": {
+            "blockbench_block_wizard": ["1.4.1"]
+        }
+    },
+    "modules": [
+        {
+            "description": "JJJ Disc Pack Behaviors",
+            "type": "data",
+            "version": [1,1,2],
+            "uuid": "6a08148c-a393-fab5-f1a8-64bb2236edac"
+        },
+        {
+            "description": "Scripts",
+            "type": "script",
+            "language": "javascript",
+            "uuid": "c82ac1a0-2343-4014-a08c-68d65a748000",
+            "version": [1,1,2],
+            "entry": "main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.1.0"
+        },
+        {
+            "uuid": "31a1fbd5-2e07-d3f2-2f74-9782176ee840",
+            "version": [1,1,2]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "jjj:jukebox",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "tile.jjj:jukebox.name"
+            },
+            "minecraft:fuel": {
+                "duration": 15
+            },
+            "minecraft:block_placer": {
+                "block": "jjj:jukebox",
+                "replace_block_item": true
+            }
+        }
+    }
+}

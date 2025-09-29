@@ -1,0 +1,13 @@
+{
+    "__use_legacy_max_distance": true,
+    "category": "record",
+    "max_distance": 64.0,
+    "min_distance": null,
+    "sounds": [
+        {
+            "name": "__sound_path__",
+            "stream": true,
+            "volume": 0.4
+        }
+    ]
+}

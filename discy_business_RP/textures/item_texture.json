@@ -1,0 +1,19 @@
+{
+    "texture_data": {
+        "jjj:volume_alpha_disc": {
+            "textures": "textures/items/jjj_custom_discs/volume_alpha"
+        },
+        "jjj:volume_beta_disc": {
+            "textures": "textures/items/jjj_custom_discs/volume_beta"
+        },
+        "jjj:custom_disc_alpha": {
+            "textures": "textures/items/jjj_custom_discs/alpha"
+        },
+        "jjj:enchanted_music_disc": {
+            "textures": "textures/items/jjj_custom_discs/enchanted_disc"
+        },
+        "jjj:dummy_disc": {
+            "textures": "textures/items/jjj_custom_discs/dummy_disc"
+        }
+    }
+}

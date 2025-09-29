@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.large_item.first_person": {
+			"loop": true,
+			"bones": {
+				"item_bone": {
+					"rotation": [83.75271, 10.73651, 8.21331],
+					"position": [-2, -2, 5],
+					"scale": 1.1
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+{
+    "format_version": "1.20.0",
+    "sound_definitions": {
+        "record.sweden": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/calm3",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        },
+        "record.wet_hands": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/piano2",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        },
+        "record.mice_on_venus": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/piano3",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        },
+        "record.aria_math": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/creative/creative4",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        },
+        "record.dead_voxels": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/nether/nether2",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        },
+        "record.the_end": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/end/end",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        },
+        "record.alpha": {
+            "__use_legacy_max_distance": true,
+            "category": "record",
+            "max_distance": 64.0,
+            "min_distance": null,
+            "sounds": [
+                {
+                    "name": "sounds/music/game/end/credits",
+                    "stream": true,
+                    "volume": 1.0
+                }
+            ]
+        }
+    }
+}

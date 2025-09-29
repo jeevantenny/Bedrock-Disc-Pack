@@ -1,0 +1,28 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "__item_id__",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "__texture_path__"
+            },
+            "geometry": {
+                "default": "geometry.large_item"
+            },
+            "animations": {
+                "first_person": "animation.large_item.first_person"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "first_person": "c.is_first_person"
+                    }
+                ]
+            },
+            "render_controllers": ["controller.render.item_default"]
+        }
+    }
+}

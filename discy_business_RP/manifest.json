@@ -1,0 +1,23 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "JJJ Disc Pack §8§oTemplate§r",
+        "description": "Adds a few vanilla music as music discs. This pack can be modified to add more music discs to the game.",
+        "uuid": "31a1fbd5-2e07-d3f2-2f74-9782176ee840",
+        "version": [1,1,2],
+        "min_engine_version": [1,21,100]
+    },
+    "metadata": {
+        "generated_with": {
+            "blockbench_block_wizard": ["1.4.1"]
+        }
+    },
+    "modules": [
+        {
+            "description": "JJJ Disc Pack Resources",
+            "type": "resources",
+            "uuid": "71581d1b-baba-9e6b-628b-bc04eebb6306",
+            "version": [1,1,2]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "jjj:enchanted_music_disc",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.record"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "§dEnchanted Music Disc\n§7Plays a random discovered music disc.§r"
+            },
+            "minecraft:icon": "jjj:enchanted_music_disc",
+            "minecraft:glint": true,
+            "minecraft:max_stack_size": 1,
+            "minecraft:should_despawn": false
+        }
+    }
+}

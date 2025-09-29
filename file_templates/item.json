@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "__item_name__",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.record"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "__display_name__"
+            },
+            "minecraft:icon": "__item_texture__",
+            "minecraft:max_stack_size": 1,
+            "minecraft:should_despawn": false
+        }
+    }
+}

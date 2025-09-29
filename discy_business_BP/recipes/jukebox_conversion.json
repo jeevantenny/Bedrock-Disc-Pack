@@ -1,0 +1,29 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "jjj:Jukebox_conversion_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "A"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:jukebox"
+            }
+        },
+        "unlock": [
+          {
+            "item": "minecraft:jukebox"
+          }
+        ],
+        "result": {
+            "item": "jjj:jukebox",
+            "count": 1
+        },
+        "priority": -1
+    }
+}

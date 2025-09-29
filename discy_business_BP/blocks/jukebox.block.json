@@ -1,0 +1,112 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "jjj:jukebox",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"jjj:playing_disc": [
+					false,
+					true
+				],
+
+				"jjj:disc_id_a": {"values": {"min": 0, "max": 15}},
+				"jjj:disc_id_b": {"values": {"min": 0, "max": 15}},
+
+				"jjj:playing_enchanted_disc": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:display_name": "tile.jjj:jukebox.name",
+			"minecraft:custom_components": [
+				"jjj:jukebox"
+			],
+
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+
+
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:wooden_tier')"
+						},
+						"destroy_speed": 1.5
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:stone_tier')"
+						},
+						"destroy_speed": 0.75
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:iron_tier')"
+						},
+						"destroy_speed": 0.5
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:golden_tier')"
+						},
+						"destroy_speed": 0.25
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:diamond_tier')"
+						},
+						"destroy_speed": 0.4
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:netherite_tier')"
+						},
+						"destroy_speed": 0.35
+					}
+				]
+			},
+
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 6
+			},
+			
+
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "jukebox_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "noteblock",
+					"render_method": "opaque"
+				},
+				"north": {
+					"texture": "jukebox_side",
+					"render_method": "opaque"
+				},
+				"south": {
+					"texture": "jukebox_side",
+					"render_method": "opaque"
+				},
+				"east": {
+					"texture": "jukebox_side",
+					"render_method": "opaque"
+				},
+				"west": {
+					"texture": "jukebox_side",
+					"render_method": "opaque"
+				}
+			},
+
+			"minecraft:map_color": "#976d4d"
+		}
+	}
+}

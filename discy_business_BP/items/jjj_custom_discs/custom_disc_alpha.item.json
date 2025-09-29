@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "jjj:custom_disc_alpha",
+            "menu_category": {
+                "category": "items",
+                "group": "itemGroup.name.record"
+            }
+        },
+        "components": {
+            "minecraft:display_name": {
+                "value": "§dMusic Disc\n§7C418 - §pAlpha§r"
+            },
+            "minecraft:icon": "jjj:custom_disc_alpha",
+            "minecraft:max_stack_size": 1,
+            "minecraft:should_despawn": false
+        }
+    }
+}
