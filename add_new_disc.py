@@ -89,7 +89,7 @@ def add_attachable(item_id: str, texture_name: str, attachable: str) -> None:
     desc["identifier"] = item_id
     desc["textures"]["default"] = f"{TEXTURE_FILE_REL_DIR}{texture_name}"
 
-    with open(f"{ATTACHABLES_DIR}{attachable.replace(' ', '_')}.json", 'w') as f:
+    with open(f"{ATTACHABLES_DIR}{attachable}.json", 'w') as f:
         json.dump(attachable_data, f, indent=4)
 
 
@@ -104,16 +104,16 @@ def update_script(item_id: str, song_id: str, song_name: str, artist: str, displ
         scanning = False
         while True:
             line = f.readline()
-            if not line:
+            if line == "":
                 raise EOFError("Script file invalid.")
 
             if line == "export const DiscIds = {\n":
                 scanning = True
             elif scanning:
-                if line == "}\n":
+                if line.endswith("}\n"):
                     break
-                elif line != "\n":
-                    latest_disc_num = line.split()[0][:-1]
+                elif (sections:=line.split()):
+                    latest_disc_num = sections[0][:-1]
         
         new_disc_num = int(latest_disc_num)+1
         disc_data_instance = f"DiscData(\"{item_id}\", \"record.{song_id}\", \"{song_name}\", "
