@@ -80,14 +80,15 @@ world.afterEvents.playerInteractWithEntity.subscribe((data) => {
 
 
 
+
+// Summons disc items entity using random disc loot when a creeper is killed by skeleton.
+
 const skeletonTypes = [
     "minecraft:skeleton",
     "minecraft:stray",
     "minecraft:bogged"
 ]
 
-
-// Summons disc items entity using random disc loot when a creeper is killed by skeleton.
 world.afterEvents.entityDie.subscribe((data) => {
     const { deadEntity, damageSource } = data;
 
@@ -108,9 +109,16 @@ world.afterEvents.entityDie.subscribe((data) => {
 
 
 
-const endDiscId = 105
+
+
+
+
+
 
 // Drops 'Alpha' disc when Ender Dragon is Killed.
+
+const endDiscId = 22
+
 world.afterEvents.entityDie.subscribe((data) => {
     const { deadEntity } = data;
 

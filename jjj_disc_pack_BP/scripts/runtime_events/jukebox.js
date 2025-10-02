@@ -1,4 +1,4 @@
-import { system, world, EntityEquippableComponent, EquipmentSlot } from "@minecraft/server";
+import { system, world } from "@minecraft/server";
 
 import { JukeboxController } from "../jukebox_controller";
 
