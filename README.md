@@ -1,9 +1,11 @@
-# JJJ Disc Pack
+# Bedrock Music Disc Pack
 
 **For Minecraft Bedrock Edition version 1.21.100 and later**  
 ***Pack Version 1.1.2***
 
 This addon adds a few vanilla music by C418 as music discs. This pack can be used as a template to add more music discs to the game. This pack was inspired by the Edd's More Music Discs addon but no code was directly copied over (it was used as a base on how to structure my own code.)
+
+All Assets in the pack are original.
 
 Disclaimer: I haven't got the chance to test out this version of the pack yet.
 
@@ -12,7 +14,7 @@ Disclaimer: I haven't got the chance to test out this version of the pack yet.
 
 ## Content Added
 ### Blocks
-- New jukebox block that can play vanilla and custom discs.
+- New jukebox block that can play vanilla and custom discs (This replaces vanilla jukebox, looks exactly the same but has green text).
 
 ### Items
 - Adds 7 vanilla music discs.
@@ -27,12 +29,15 @@ Disclaimer: I haven't got the chance to test out this version of the pack yet.
 
 ### Recipes
 - Modified vanilla recipe for jukebox so that it crafts the new jukebox instead.
+- Vanilla and new Jukebox can be converted between each other using a crafting grid.
 
 
 
 ## Adding new discs
-1. Add disc texture in directory ['disc_business_RP/textures/items/jjj_custom_discs'](./discy_business_RP/textures/items/jjj_custom_discs/info.md). Preferably 16x16 but other sizes can work.
-2. Add OGG Verbose audio file to ['disc_business_RP/sounds/music/game/records'](./discy_business_RP/sounds//music/game/records/info.md).
+The python script I used to add discs is a bit rudimentary but worked well for what I needed. I might make a better script do add discs in the future.
+
+1. Add disc texture in directory ['jjj_disc_pack_RP/textures/items/jjj_custom_discs'](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/info.md). Preferably 16x16 but other sizes can work.
+2. Add OGG Verbose audio file to ['jjj_disc_pack_RP/sounds/music/game/records'](./jjj_disc_pack_RP/sounds//music/game/records/info.md).
 3. In the root folder find and run 'add_new_disc.py'.
 4. Follow command line instructions.
 
@@ -42,19 +47,19 @@ After confirming new disc addition, and everything has been done correctly, the 
 
 
 ## Added Vanilla Music Discs
-![](./discy_business_RP/textures/items/jjj_custom_discs/volume_alpha.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/volume_alpha.png)
 C418 - Mice on Venus  
-![](./discy_business_RP/textures/items/jjj_custom_discs/volume_alpha.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/volume_alpha.png)
 C418 - Sweden  
-![](./discy_business_RP/textures/items/jjj_custom_discs/volume_alpha.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/volume_alpha.png)
 C418 - Wet Hands  
-![](./discy_business_RP/textures/items/jjj_custom_discs/alpha.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/alpha.png)
 C418 - Alpha  
-![](./discy_business_RP/textures/items/jjj_custom_discs/volume_beta.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/volume_beta.png)
 C418 - Aria Math  
-![](./discy_business_RP/textures/items/jjj_custom_discs/volume_beta.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/volume_beta.png)
 C418 - Dead Voxels  
-![](./discy_business_RP/textures/items/jjj_custom_discs/volume_beta.png)
+![](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/volume_beta.png)
 C418 - The End
 
 

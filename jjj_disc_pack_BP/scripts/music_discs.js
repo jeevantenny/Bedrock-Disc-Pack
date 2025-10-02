@@ -36,7 +36,7 @@ export const dummyDiscName = "jjj:dummy_disc";
 
 export const enchantedDisc = new DiscData(enchantedDiscName, "invalid");
 
-const discLootLog = "disc_loot_log";
+const foundDiscs = "jjj_found_discs";
 
 
     
@@ -200,7 +200,7 @@ export function chooseDiscForLoot(lootType) {
  */
 export function getFoundDiscIds() {
     try {
-        return Array.from(new Set(JSON.parse(world.getDynamicProperty(discLootLog))));
+        return Array.from(new Set(JSON.parse(world.getDynamicProperty(foundDiscs))));
     }
     catch (e) {
         debugMessage(e);
@@ -224,7 +224,7 @@ export function setDiscAsFound(discName) {
         }
 
         foundDiscs.push(discId);
-        world.setDynamicProperty(discLootLog, `[${foundDiscs}]`); // TODO: remove .toString()
+        world.setDynamicProperty(foundDiscs, `[${foundDiscs}]`); // TODO: remove .toString()
     }
     else {
         throw `NameError: Invalid discName '${discName}. Could not set being as found.'`
@@ -236,5 +236,5 @@ export function setDiscAsFound(discName) {
  * Clears all discs that have been found.
  */
 export function clearFoundDiscs() {
-    world.setDynamicProperty(discLootLog, "[]");
+    world.setDynamicProperty(foundDiscs, "[]");
 }

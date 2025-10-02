@@ -5,8 +5,7 @@ from utils import *
 
 
 
-
-UNIDEXED_DISCS = 9
+UPDATE_README = True
 
 def get_disc_count() -> int:
     with open("addon_info.txt", 'r') as f:
@@ -136,29 +135,11 @@ def update_script(item_id: str, song_id: str, song_name: str, artist: str, displ
 
 
 def update_readme(artist: str, song_name: str, texture_name: str) -> None:
-    with open(README_PATH, 'a') as f:
-        f.write(f"  \n![](./{RP_DIR}{TEXTURE_FILE_REL_DIR}{texture_name}.png)\n{artist} - {song_name}")
-
-
-
-
-
-
-def update_manifest() -> None:
-    disc_count = get_disc_count()
-
-    disc_count += 1
-    desc = f"Adds {disc_count+UNIDEXED_DISCS} new music discs with music coming from all sorts of places."
-
-    BP_manifest = JsonEditor.load(f"{BP_DIR}manifest.json")
-    BP_manifest["header"]["description"] = desc
-    BP_manifest.save()
-
-    RP_manifest = JsonEditor.load(f"{RP_DIR}manifest.json")
-    RP_manifest["header"]["description"] = desc
-    RP_manifest.save()
-
-    set_disc_count(disc_count)
+    try:
+        with open(README_PATH, 'a') as f:
+            f.write(f"  \n![](./{RP_DIR}{TEXTURE_FILE_REL_DIR}{texture_name}.png)\n{artist} - {song_name}")
+    except FileNotFoundError:
+        pass
 
 
 
@@ -228,39 +209,13 @@ def add_disc() -> None:
     update_sound_definitions(song_id)
     update_item_texture(item_id, texture_name)
     update_script(item_id, song_id, song_name, artist, display_color_code)
-    update_manifest()
-    update_readme(artist, song_name, texture_name)
-
     if attachable:
         add_attachable(item_id, texture_name, attachable)
+        
+    if UPDATE_README:
+        update_readme(artist, song_name, texture_name)
 
     print(f"Added disc {item_id}")
-
-
-
-
-
-
-
-
-
-
-
-def refresh_json(path: str) -> None:
-    "Loads and saves a json file with the current formatting system."
-
-    JsonEditor.load(path).save()
-
-
-
-
-
-
-
-
-
-
-
 
 
 
