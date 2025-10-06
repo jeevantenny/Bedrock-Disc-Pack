@@ -7,18 +7,14 @@
 				"category": "items"
 			},
 			"states": {
-				"jjj:playing_disc": [
-					false,
-					true
+				"jjj:playing_mode": [
+					"not_playing",
+					"playing",
+					"playing_enchanted"
 				],
 
 				"jjj:disc_id_a": {"values": {"min": 0, "max": 15}},
-				"jjj:disc_id_b": {"values": {"min": 0, "max": 15}},
-
-				"jjj:playing_enchanted_disc": [
-					false,
-					true
-				]
+				"jjj:disc_id_b": {"values": {"min": 0, "max": 15}}
 			}
 		},
 		"components": {

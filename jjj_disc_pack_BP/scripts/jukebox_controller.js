@@ -32,10 +32,9 @@ import {
  * A shortcut for getting the names of the states of jjj:jukebox
  */
 const jbStates = {
-    playingDisc: "jjj:playing_disc",
+    playingMode: "jjj:playing_mode",
     discIdA: "jjj:disc_id_a",
-    discIdB: "jjj:disc_id_b",
-    playingEnchantedDisc: "jjj:playing_enchanted_disc"
+    discIdB: "jjj:disc_id_b"
 }
 
 
@@ -170,10 +169,11 @@ export class JukeboxController {
         if (discId !== undefined) {
 
             this.__setDiscId(block, discId);
-            this.__setPlaying(block, true);
             
             if (discName === enchantedDiscName) {
-                this.__setEnchantedDisc(block, true);
+                this.__setPlayingMode(block, "playing_enchanted");
+            } else {
+                this.__setPlayingMode(block, "playing");
             }
 
             const { songId } = DiscIds[discId];
@@ -209,15 +209,14 @@ export class JukeboxController {
      * @return {DiscData | null} The id of the disc that has been ejected
      */
     static ejectDisc(block) {
-        const disc = this.getCurrentDisc(block);
+        let disc = this.getCurrentDisc(block);
         if (disc !== null) {
-            this.__setDiscId(block, 0);
-            this.__setPlaying(block, false);
             this.__stopSong(block, disc.songId);
             if (this.__getEnchantedDisc(block)) {
-                this.__setEnchantedDisc(block, false);
-                return enchantedDisc;
+                disc = enchantedDisc;
             }
+            this.__setDiscId(block, 0);
+            this.__setPlayingMode(block, "not_playing");
         }
 
         return disc;
@@ -232,7 +231,7 @@ export class JukeboxController {
      * @return {DiscData | null}
      */
     static ejectDiscWhenBroken(block, destroyPermutation) {
-        if (destroyPermutation.getState(jbStates.playingDisc)) {
+        if (destroyPermutation.getState(jbStates.playingMode !== "not_playing")) {
             const discId = destroyPermutation.getState(jbStates.discIdA) + destroyPermutation.getState(jbStates.discIdB)*16;
             const disc = DiscIds[discId];
             this.__stopSong(block, disc.songId);
@@ -268,7 +267,6 @@ export class JukeboxController {
 
     /**
      * Returns the name id of the current disc playing.
-     * Returns 
      * @param {Block} block
      * @returns {DiscData | null}
      */
@@ -295,7 +293,7 @@ export class JukeboxController {
      * @returns {boolean}
      */
     static isPlayingDisc(block) {
-        return block.permutation.getState(jbStates.playingDisc);
+        return block.permutation.getState(jbStates.playingMode) != "not_playing";
     }
 
     
@@ -401,22 +399,12 @@ export class JukeboxController {
 
     
     /**
-     * Sets a value for the jjj:playing_disc block state.
+     * Sets a value for the jjj:playing_mode block state.
      * @param {Block} block 
-     * @param {boolean} value 
+     * @param {"not_playing" | "playing" | "playing_enchanted"} value 
      */
-    static __setPlaying(block, value) {
-        block.setPermutation(block.permutation.withState(jbStates.playingDisc, value));
-    }
-
-
-    /**
-     * Sets the value for if the disc if playing an Enchanted Music Disc.
-     * @param {Block} block 
-     * @param {boolean} value 
-     */
-    static __setEnchantedDisc(block, value) {
-        block.setPermutation(block.permutation.withState(jbStates.playingEnchantedDisc, value));
+    static __setPlayingMode(block, value) {
+        block.setPermutation(block.permutation.withState(jbStates.playingMode, value));
     }
 
 
@@ -434,10 +422,10 @@ export class JukeboxController {
     /**
      * Sets an action bar message to all players in range or a specific list of players.
      * @param {String} message 
-     * @param {String} color 
+     * @param {String} colorCode 
      * @param {Player[] | null} player 
      */
-    static __actionBarMessage(block, message, color='d', players=null) {
+    static __actionBarMessage(block, message, colorCode='d', players=null) {
         let _players;
         if (players === null) {
             _players = this.__getPlayersInRange(block, 64);
@@ -447,7 +435,7 @@ export class JukeboxController {
         }
 
         for (const player of _players) {
-            player.onScreenDisplay.setActionBar(`§${color}${message}`);
+            player.onScreenDisplay.setActionBar(`§${colorCode}${message}`);
         }
     }
 }
