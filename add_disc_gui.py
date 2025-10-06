@@ -2,9 +2,9 @@ import tkinter as tk
 from tkinter import filedialog
 
 import os
-from typing import Iterable, Literal
+from typing import Literal
 
-from utils import copy_texture_file, copy_audio_file, get_disc_count, add_disc, increment_disc_count
+from things_for_script.utils import copy_texture_file, copy_audio_file, get_disc_count, add_disc, increment_disc_count
 
 
 SIDEBAR_COLOR = "#000011"

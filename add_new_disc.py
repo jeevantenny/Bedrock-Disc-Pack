@@ -1,7 +1,7 @@
 import json
 from typing import Self, Callable, Any, NamedTuple
 
-from utils import *
+from things_for_script.utils import *
 
 
 
