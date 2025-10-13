@@ -42,6 +42,11 @@ def main():
     artist = LabelEntry(sidebar, "Artist")
     artist.pack()
 
+    # text_color = tk.StringVar(window, "test")
+    # color_selector = tk.OptionMenu(sidebar, text_color, "test", "ok", "say that again")
+    # color_selector.pack(anchor=tk.NW, padx=5)
+    # color_selector.config(bg="#22aaff", fg="#eeeeee", font=("Arial", 12, "bold"), border=0, relief=tk.FLAT)
+
     texture_file = FileSelector(sidebar, "Select texture file", "png")
     texture_file.pack()
 
@@ -87,6 +92,8 @@ def main():
                  UPDATE_README)
         
         increment_disc_count()
+
+        quit()
 
 
 
@@ -174,15 +181,18 @@ class FileSelector(tk.Button):
         self.__prompt = prompt
         self.__file_type = file_type
         self.__file_path: str | None = None
+        self.__label = tk.Label(master, text="", font=("Arial", 7, "bold"), bg=SIDEBAR_COLOR, fg=FONT_COLOR)
         super().__init__(master, text=prompt,  font=("Arial", 10, "bold"), bg="#4488AA", fg="#eeeeee", command=self.__open_file)
 
 
     def pack(self):
         super().pack(anchor=tk.NW, padx=5, pady=7)
+        self.__label.pack(anchor=tk.NW, padx=5, pady=(0, 7))
 
 
     def __open_file(self):
         self.__file_path = open_file(self.__prompt, self.__file_type)
+        self.__label.config(text=os.path.basename(self.__file_path))
 
 
     def get(self) -> str | None:
