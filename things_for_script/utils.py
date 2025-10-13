@@ -5,8 +5,8 @@ import json
 
 
 
-BP_DIR = "jjj_disc_pack_BP/"
-RP_DIR = "jjj_disc_pack_RP/"
+BP_DIR = "disc_pack_BP/"
+RP_DIR = "disc_pack_RP/"
 
 
 ITEMS_DIR = f"{BP_DIR}items/jjj_custom_discs/"

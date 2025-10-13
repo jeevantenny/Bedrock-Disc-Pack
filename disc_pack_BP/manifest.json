@@ -1,7 +1,7 @@
 {
     "format_version": 2,
     "header": {
-        "name": "JJJ Disc Pack §8§oTemplate§r",
+        "name": "Disc Pack §8§oTemplate§r",
         "description": "Adds a few vanilla music as music discs. This pack can be modified to add more music discs to the game.",
         "uuid": "e939b0c3-638a-4513-a211-58ecc03d0c95",
         "version": [1,1,2],
@@ -14,7 +14,7 @@
     },
     "modules": [
         {
-            "description": "JJJ Disc Pack Behaviors",
+            "description": "Disc Pack Behaviors",
             "type": "data",
             "version": [1,1,2],
             "uuid": "7c6ced56-3d0a-458f-a33a-ecb449ae924a"
