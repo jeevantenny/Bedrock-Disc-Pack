@@ -1,3 +1,11 @@
+"""
+This is an old script used for adding discs. DON'T RUN THIS ONE.
+"""
+
+
+
+
+
 import tkinter as tk
 from tkinter import filedialog
 

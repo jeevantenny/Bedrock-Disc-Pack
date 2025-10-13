@@ -34,14 +34,16 @@ Disclaimer: I haven't got the chance to test out this version of the pack yet.
 
 
 ## Adding new discs
-The python script I used to add discs is a bit rudimentary but worked well for what I needed. I might make a better script do add discs in the future.
+<!-- The python script I used to add discs is a bit rudimentary but worked well for what I needed. I might make a better script do add discs in the future.
 
 1. Add disc texture in directory ['jjj_disc_pack_RP/textures/items/jjj_custom_discs'](./jjj_disc_pack_RP/textures/items/jjj_custom_discs/). Preferably 16x16 but other sizes can work.
 2. Add OGG Verbose audio file to ['jjj_disc_pack_RP/sounds/music/game/records'](./jjj_disc_pack_RP/sounds//music/game/records/).
 3. In the root folder find and run 'add_new_disc.py'.
-4. Follow command line instructions.
+4. Follow command line instructions. -->
 
-After confirming new disc addition, and everything has been done correctly, the music disc should be ready to use in the pack (or at least that's the intension).
+Find and run add_disc_gui.py in the root directory. Provide a name and Author for the disc and upload the relevant files then click 'Add Music Disc'.
+
+After confirming the new disc addition the music disc should be ready to use in the pack.
 
 
 
