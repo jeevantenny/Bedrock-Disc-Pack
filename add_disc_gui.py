@@ -1,9 +1,6 @@
 """
-This is an old script used for adding discs. DON'T RUN THIS ONE.
+Run this script to add a music disc to the pack.
 """
-
-
-
 
 
 import tkinter as tk

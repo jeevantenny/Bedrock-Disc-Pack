@@ -3,11 +3,11 @@
 **For Minecraft Bedrock Edition version 1.21.100 and later**  
 ***Pack Version 1.1.2***
 
-This addon adds a few vanilla music by C418 as music discs. This pack can be used as a template to add more music discs to the game. This pack was inspired by the Edd's More Music Discs addon but no code was directly copied over (it was used as a base on how to structure my own code.)
+This addon adds a few vanilla music by C418 as music discs. This pack can be used as a template to add more music discs to the game. This pack was inspired by the [Edd's More Music Discs addon](https://mcpedl.com/edds-more-music-discs/) but no code was directly copied over (it was used as a base on how to structure my own code.)
 
 All Assets in the pack are original.
 
-Disclaimer: I haven't got the chance to test out this version of the pack yet.
+Disclaimer: I haven't got the chance to test out this version of the pack yet. Let me know if it breaks...
 
 
 

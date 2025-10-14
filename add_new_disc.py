@@ -1,5 +1,7 @@
-import json
-from typing import Self, Callable, Any, NamedTuple
+"""
+This is an old script used for adding discs. DON'T RUN THIS ONE.
+"""
+
 
 from things_for_script.utils import *
 
