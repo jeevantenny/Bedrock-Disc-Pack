@@ -42,7 +42,7 @@ const jbStates = {
 
 /**
  * This class will be used to control behavior of the jukebox.
- * @blocktypeId jjj:jukebox
+ * @blockTypeId jjj:jukebox
  */
 export class JukeboxController {
 

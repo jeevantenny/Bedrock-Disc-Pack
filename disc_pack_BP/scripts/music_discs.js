@@ -194,6 +194,7 @@ export function chooseDiscForLoot(lootType) {
 
 
 
+
 /**
  * Returns the disc Ids of the music discs that have been found.
  * @returns {Number[]}
@@ -214,21 +215,21 @@ export function getFoundDiscIds() {
  * Marks a music disc as being found to avoid it appearing in loot
  * chests again if there are other discs that are yet to be found.
  * @param {String} discName 
+ * @throws {NameError} if disc namespace is invalid.
  */
 export function setDiscAsFound(discName) {
     const discId = namespaceToId[discName];
-    if (discId !== undefined) {
-        let foundDiscs = getFoundDiscIds();
-        if (foundDiscs.includes(discId)) {
-            return;
-        }
+    if (discId === undefined) {
+        throw `ValueError: Invalid discName '${discName}. Could not set as being as found.'`
+    }
+    
+    let foundDiscIds = getFoundDiscIds();
+    if (foundDiscIds.includes(discId)) {
+        return;
+    }
 
-        foundDiscs.push(discId);
-        world.setDynamicProperty(foundDiscs, `[${foundDiscs}]`); // TODO: remove .toString()
-    }
-    else {
-        throw `NameError: Invalid discName '${discName}. Could not set being as found.'`
-    }
+    foundDiscIds.push(discId);
+    world.setDynamicProperty(foundDiscs, `[${foundDiscIds}]`);
 }
 
 
@@ -236,5 +237,5 @@ export function setDiscAsFound(discName) {
  * Clears all discs that have been found.
  */
 export function clearFoundDiscs() {
-    world.setDynamicProperty(foundDiscs, "[]");
+    world.clearDynamicProperties();
 }
