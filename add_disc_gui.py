@@ -78,7 +78,7 @@ def main():
         copy_texture_file(f"{disc_name}.png", texture_file.get())
 
         audio_path = audio_file.get()
-        copy_audio_file(f"{disc_name}.{os.path.splitext(audio_path)[-1]}", audio_path)
+        copy_audio_file(f"{disc_name}{os.path.splitext(audio_path)[-1]}", audio_path)
 
         
         if is_attachable.get():
