@@ -1,0 +1,8 @@
+__pycache__/
+.vscode/
+.VSCodeCounter/
+node_modules/
+
+test.*
+.mcattributes
+*.bbmodel
